@@ -1,0 +1,108 @@
+/* .first-input input[type="text"]
+{
+    background: transparent;
+    border: none;
+    outline:none;
+    width: 100%;
+}; */
+
+.first textarea
+{
+    background: transparent;
+    border: none;
+    outline:none;
+    width: 100%;
+};
+
+.centre {
+    font-family: Verdana;
+    background: #dcdcc6;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+ul li {
+    list-style: none;
+    color: #494942;
+    font-size: 6em;
+    font-weight: bold;
+    letter-spacing: 10px;
+    filter: blur(1px);
+}
+
+ul:hover li {
+    animation: animate 2s linear forwards;
+}
+
+@keyframes animate {
+    0% {
+        transform: rotate(0deg) translateY(0px);
+        opacity: 1;
+        filter: blur(1px);
+    }
+    100% {
+        transform: rotate(45deg) translateY(-200px);
+        opacity: 0;
+        filter: blur(20px);
+    }
+}
+/* every letter will need to get an animation 
+  target every letter that comes in add delay
+*/
+
+ul li:nth-child(1) {
+    animation-delay: 0s;
+}
+
+ul li:nth-child(2) {
+    animation-delay: .4s;
+}
+
+ul li:nth-child(3) {
+    animation-delay: .8s;
+}
+
+ul li:nth-child(4) {
+    animation-delay: 1.2s;
+}
+
+ul li:nth-child(5) {
+    animation-delay: 1.6s;
+}
+
+ul li:nth-child(6) {
+    animation-delay: 2s;
+}
+
+h5 {
+    position: absolute;
+    bottom: 2%;
+    left: 50%;
+    color: #494942;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-style: italic;
+    filter: blur(0.5px);
+}
+
+a {
+    color: inherit;
+    transition: .4s ease-in-out;
+}
+
+a:hover {
+	letter-spacing: 3px;
+}

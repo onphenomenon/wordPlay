@@ -1,0 +1,39 @@
+<p>
+  what index : 0:
+</p>
+<!-- <div *ngFor="let entry of entries.controls; let i = index;"> -->
+<form [formGroup]="entries.controls[0]" (ngSubmit)="onSubmit(i)">
+  <div class="card-row">
+    <div class="first">
+      <!-- <input type="text" formControlName="text" placeholder="text">  -->
+      <textarea (keyup)="onKey($event)" name="text" formControlName="text" placeholder="text"></textarea>
+    </div>
+  </div>
+  
+
+    <div class="centre">
+      <ul>
+        <li>W</li>
+        <li>H</li>
+        <li>O</li>
+        <li>O</li>
+        <li>S</li>
+        <li>H</li>
+      </ul>
+    </div>
+    <!-- <div *ngIf="formErrors.text" class="alert">
+      {{formErrors.text }}
+    </div> -->
+
+    <div class="card-row">
+      <!--- button disabled unless form fields filled out correctly -->
+      <!-- <button type="submit" [disabled]="!card.valid"> -->
+      <!-- <button><i class="material-icons"></i>SAVE</button> -->
+      <!-- </button> -->
+    </div>
+</form>
+
+
+<!-- 
+<input type="text">
+<input type="submit" value="Submit"> -->
